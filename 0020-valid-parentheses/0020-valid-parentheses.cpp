@@ -5,14 +5,9 @@ public:
             return false;
         stack<int> stk;
         int len=s.size();
-        //cout<<len<<endl;
-        //stk.push(s[0]);
-        //cout<<int (s[0])<<endl;
         for(int i=0;i<len;i++)
         {
             int val=int (s[i]);
-            //int top=int (stk.top());
-            //cout<<val<<endl;
             if((val==40) || (val==41))
             {
                 if(val==40)
@@ -55,7 +50,6 @@ public:
                 else
                     stk.push(33);
             }
-            //cout<<stk.top()<<endl;
         }
         if(stk.empty())
             return true;
