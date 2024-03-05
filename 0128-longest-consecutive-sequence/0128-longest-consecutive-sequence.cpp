@@ -23,7 +23,6 @@ public:
                     max=len;
                 len=1;
             }
-            //cout<<max<<endl;
         }
         return max;
     }
