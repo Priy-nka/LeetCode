@@ -12,15 +12,6 @@ public:
         high--;
         while (low<high)
         {
-//             if(high-low==2)
-//             {
-//                 if (s[low]==s[low+1])
-//                 {
-//                     diff+=2;
-//                     low++;
-//                 }
-                
-//             }
             if(s[low]==s[high])
             {
                 diff=diff+2;
