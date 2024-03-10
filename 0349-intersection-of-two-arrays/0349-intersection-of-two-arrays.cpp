@@ -13,7 +13,6 @@ public:
         }
         for (int i=0;i<m;i++)
         {
-            //cout<<nums2[i]<<endl;
             if (n==1)
             {
                 if (nums1[0]==nums2[i] && !mp[nums2[i]])
@@ -30,14 +29,10 @@ public:
                 mid=(low+high)/2;
                 if (nums1[mid]==nums2[i] || nums1[low]==nums2[i] || nums1[high]==nums2[i])
                 {
-                    //cout<<nums2[i]<<endl;
                     if (!mp[nums2[i]])
                     {
                         ans.push_back(nums2[i]);
                         mp[nums2[i]]++;
-                        //cout<<nums2[i];
-                        
-                        //low=high;
                     }
                     low=high;
                 }
