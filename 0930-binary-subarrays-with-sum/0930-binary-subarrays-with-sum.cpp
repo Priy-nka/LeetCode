@@ -13,12 +13,7 @@ public:
                 if (sum == goal)
                 {
                     ans++;
-                    //sum = nums[i];
                 }
-                // else
-                // {
-                //     sum+=nums[j];
-                // }
             }
         }
         if (nums[len-1]==goal)
