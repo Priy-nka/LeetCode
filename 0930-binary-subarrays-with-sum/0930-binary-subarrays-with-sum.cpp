@@ -1,24 +1,6 @@
 class Solution {
 public:
     int numSubarraysWithSum(vector<int>& nums, int goal) {
-        // int ans=0, len=nums.size();
-        // for (int i = 0; i < len-1; i++)
-        // {
-        //     int sum=nums[i];
-        //     if (nums[i]==goal)
-        //         ans++;
-        //     for (int j=i+1; j<len; j++)
-        //     {
-        //         sum+=nums[j];
-        //         if (sum == goal)
-        //         {
-        //             ans++;
-        //         }
-        //     }
-        // }
-        // if (nums[len-1]==goal)
-        //     ans++;
-        // return ans;
         int len=nums.size(), ans=0;
         if (len==1)
         {
@@ -42,7 +24,7 @@ public:
             }
             else if (sum>goal)
             {
-                r=len;
+                r=len+1;
             }
             else
             {
