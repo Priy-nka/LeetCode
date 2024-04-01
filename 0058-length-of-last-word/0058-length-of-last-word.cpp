@@ -16,9 +16,7 @@ public:
         while (len>=0 && s[len]!=' ')
         {
             size++;
-            len--;
-            //if (len<0)
-                
+            len--;  
         }
         return size;
     }
