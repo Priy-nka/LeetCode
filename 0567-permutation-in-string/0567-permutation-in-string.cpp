@@ -7,16 +7,6 @@ public:
         {
             org_mp[i]++;
         }
-        // if (n1==1)
-        // {
-        //     if (org_mp[s2[0]])
-        //         return true;
-        //     return false;
-        // }
-        // for (auto m:org_mp)
-        // {
-        //     cout<<m.first<<" "<<m.second<<endl;
-        // }
         int i=0; int j=i+n1-1; int count=0;
         while (j<n2)
         {
@@ -38,11 +28,6 @@ public:
                 j--;
                 }
             }
-            // cout<<"mp: "<<endl;
-            // for (auto x:mp)
-            // {
-            //     cout<<x.first<<" "<<x.second<<endl;
-            // }
             if (mp==org_mp)
                 return true;
             i=count;
