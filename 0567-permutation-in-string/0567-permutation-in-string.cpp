@@ -14,18 +14,17 @@ public:
             map<char, int>mp;
             while (i<=j)
             {
-                if (i==j)
-                {
-                    mp[s2[i]]++;
-                    i++;
-                    j--;
-                }
-                else
+                if (i!=j)
                 {
                 mp[s2[i]]++;
                 mp[s2[j]]++;
                 i++;
                 j--;
+                }
+                else
+                {
+                    mp[s2[i]]++;
+                    i++;
                 }
             }
             if (mp==org_mp)
