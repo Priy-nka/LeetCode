@@ -1,22 +1,28 @@
 class Solution {
 public:
     int minLength(string s) {
-        string ab="AB"; string cd="CD";
-        stack<char> st;
-        st.push(s[0]);
-        for (int i=1; i<s.size(); i++)
-        {
-            if (!st.empty())
-            {
-                string curr = st.top()+string(1, s[i]);
-                if ((curr==ab) || (curr==cd))
-                    st.pop();
-                else
-                    st.push(s[i]);
+        int n = s.size();
+        // s+="LLLL";
+        for(int i=0;i<s.size()-1;i++){
+            if(i==n) break;
+            string temp = "";
+            temp += s[i];
+            temp += s[i+1];
+            cout<<temp<<endl;
+            if(temp == "AB" || temp=="CD"){
+                auto start  = s.begin()+i;
+                auto end  = s.begin()+i+2;
+                // cout<<i<<" : "<<s<<endl;
+                s.erase(start,end);
+                cout<<i<<" : "<<s<<endl;
+                if(i>0) i=i-2;
+                else i = -1;
+
+                // i=i-2;
             }
-            else
-                st.push(s[i]);
         }
-        return st.size();
+        // if(s == "AB" || s=="CD") return 0;
+
+        return s.size();
     }
 };
