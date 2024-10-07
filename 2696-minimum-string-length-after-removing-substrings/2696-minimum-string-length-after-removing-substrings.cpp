@@ -1,21 +1,22 @@
 class Solution {
 public:
     int minLength(string s) {
-        int n = s.size();
-        for(int i=0;i<s.size()-1;i++){
-            if(i==n) break;
-            string temp = "";
-            temp += s[i];
-            temp += s[i+1];
-            if(temp == "AB" || temp=="CD"){
-                auto start  = s.begin()+i;
-                auto end  = s.begin()+i+2;
-                s.erase(start,end);
-                if(i>0) i=i-2;
-                else i = -1;
+        string ab="AB"; string cd="CD";
+        stack<char> st;
+        st.push(s[0]);
+        for (int i=1; i<s.size(); i++)
+        {
+            if (!st.empty())
+            {
+                string curr = st.top()+string(1, s[i]);
+                if ((curr==ab) || (curr==cd))
+                    st.pop();
+                else
+                    st.push(s[i]);
             }
+            else
+                st.push(s[i]);
         }
-
-        return s.size();
+        return st.size();
     }
 };
